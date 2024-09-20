@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 13:49:37 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/09/20 16:18:58 by kodwatan         ###   ########.fr       */
+/*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
+/*   Updated: 2024/09/20 15:33:16 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#ifndef LIBFT_H
+# define LIBFT_H 
+
 #include <stdio.h>
+#include <ctype.h>
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
 
 
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-	{
-		return (2048);
-	}
-	else
-	{
-		return (0);
-	}
-}
-int	main()
-{
-	char	c;
-
-	c = '1';
-	printf("\nisdigit\ntest char: %c\nanswer: %d\n", c , isdigit(c));
-	printf("\nft_isdigit\ntest char: %c\nanswer: %d\n", c , ft_isdigit(c));
-
-}
+#endif

@@ -1,31 +1,37 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/20 13:49:23 by kodwatan          #+#    #+#             */
+/*   Updated: 2024/09/20 16:21:03 by kodwatan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+// #include <stdio.h>
+// #include <ctype.h>
+#include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	if((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >=  'a' && c <= 'z'))
-	{
-		return 1;
-	}
+	if ((ft_isdigit(c) != 0) || (ft_isalpha(c) != 0))
+		return (8);
 	else
-	{
-		return 0;
-	}
+		return (0);
 }
-int main()
-{
-	int c;
-	int result;
 
-	c = '1';
-	result = isalnum(c);
-	printf("isalnum\ntest: %c\nresult:%d\n", c , result);
+int	main()
+{
+	int	c;
+
+	c = '2';
+	printf("isalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
 	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
 
 	c = '*';
-	result = isalnum(c);
-	printf("\nisalnum\ntest: %c\nresult:%d\n", c , result);
+	printf("\nisalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
 	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
 
 }
