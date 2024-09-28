@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}
@@ -42,12 +40,10 @@ int	ft_isascii(char c)
 // 	result2 = ft_isascii(a);
 // 	printf("ft_isacii result: %d\n", result2);
 
-
 // 	result1 = isascii(b);
-// 	printf("Test char is %d\n", b);
+// 	printf("\nTest char is %d\n", b);
 // 	printf("isascii result: %d\n", result1);
 // 	result2 = ft_isascii(b);
 // 	printf("ft_isacii result: %d\n", result2);
-	
 // 	return 0;
 // }

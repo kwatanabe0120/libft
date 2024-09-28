@@ -10,16 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
+
+#ifdef __linux__
+# define TRUE_PARAM 1024
+#else
+# define TRUE_PARAM 1
+#endif
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1024);
+		return (TRUE_PARAM);
 	else
 		return (0);
 }
+
 // int	main(void)
 // {
 // 	char	c;

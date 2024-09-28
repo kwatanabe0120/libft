@@ -10,15 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
+#ifdef __linux__
+# define TRUE_PARAM 16384
+#else
+# define TRUE_PARAM 1
+#endif
 
-int	ft_isprint(char a)
+int	ft_isprint(int a)
 {
-	if (a >= 040 && a <= 0176)
+	if (a >= 32 && a <= 126)
 	{
-		return (1);
+		return (TRUE_PARAM);
 	}
 	else
 	{
@@ -26,15 +30,14 @@ int	ft_isprint(char a)
 	}
 }
 
-
 // int main(){
 // 	char a;
 // 	char b;
 // 	int result1;
 // 	int result2;
 
-// 	a = -1;
-// 	b = 0177;
+// 	a = 'A';
+// 	b = '\n';
 
 // 	printf("\nTest char is %d\n", a);
 // 	result1 = isprint(a);
@@ -42,13 +45,10 @@ int	ft_isprint(char a)
 // 	printf("The result of isprint is %d\n", result1);
 // 	printf("The result of ft_isprint is %d\n", result2);
 
-
 // 	printf("\nTest char is %d\n", b);
 // 	result1 = isprint(b);
 // 	result2 = ft_isprint(b);
 // 	printf("The result of isprint is %d\n", result1);
 // 	printf("The result of ft_isprint is %d\n", result2);
-
 // 	return 0;
-
 // }

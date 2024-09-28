@@ -10,28 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <ctype.h>
 #include "libft.h"
+
+#ifdef __linux__
+# define TRUE_PARAM 8
+#else
+# define TRUE_PARAM 1
+#endif
 
 int	ft_isalnum(int c)
 {
 	if ((ft_isdigit(c) != 0) || (ft_isalpha(c) != 0))
-		return (8);
+		return (TRUE_PARAM);
 	else
 		return (0);
 }
 
-int	main()
-{
-	int	c;
+// int	main()
+// {
+// 	int	c;
 
-	c = '2';
-	printf("isalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
-	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
+// 	c = '2';
+// 	printf("isalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
+// 	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
 
-	c = '*';
-	printf("\nisalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
-	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
+// 	c = '*';
+// 	printf("\nisalnum\ntest: %c\nresult:%d\n", c , isalnum(c));
+// 	printf("\nft_isalnum\ntest: %c\nresult:%d\n", c , ft_isalnum(c));
 
-}
+// }

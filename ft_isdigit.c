@@ -10,27 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
+#ifdef __linux__
+# define TRUE_PARAM 2048
+#else
+# define TRUE_PARAM 1
+#endif
 
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
-		return (2048);
+		return (TRUE_PARAM);
 	}
 	else
 	{
 		return (0);
 	}
 }
-int	main()
-{
-	char	c;
 
-	c = '1';
-	printf("\nisdigit\ntest char: %c\nanswer: %d\n", c , isdigit(c));
-	printf("\nft_isdigit\ntest char: %c\nanswer: %d\n", c , ft_isdigit(c));
+// int	main()
+// { 
+// 	char	c;
 
-}
+// 	c = '1';
+// 	printf("\nisdigit\ntest char: %c\nanswer: %d\n", c , isdigit(c));
+// 	printf("\nft_isdigit\ntest char: %c\nanswer: %d\n", c , ft_isdigit(c));
+
+// 	c = 'a';
+// 	printf("\nisdigit\ntest char: %c\nanswer: %d\n", c , isdigit(c));
+// 	printf("\nft_isdigit\ntest char: %c\nanswer: %d\n", c , ft_isdigit(c));
+
+// }
