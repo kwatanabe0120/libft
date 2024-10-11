@@ -6,7 +6,7 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:00:15 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/09/29 17:01:15 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/11 17:21:26 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ size_t	ft_strlen(char *str)
 	}
 	return (i);
 }
-
 // int main ()
 // {
 // 	char *str = "Hello, World!";
