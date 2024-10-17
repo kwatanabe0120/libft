@@ -6,13 +6,13 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:00:15 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/11 17:21:26 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/17 21:51:31 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

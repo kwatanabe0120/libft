@@ -6,7 +6,7 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/09/29 21:16:05 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/17 21:52:19 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 void	*ft_memset(void *target, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif
