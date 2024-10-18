@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_test.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/18 21:06:18 by kodwatan         ###   ########.fr       */
+/*   Created: 2024/10/18 21:06:55 by kodwatan          #+#    #+#             */
+/*   Updated: 2024/10/18 21:07:07 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H 
-# include<stdio.h>
+# define LIBFT_H
 
+# include<stdio.h>
+# include<ctype.h>
+# include<string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
