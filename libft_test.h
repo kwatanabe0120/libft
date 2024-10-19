@@ -6,7 +6,7 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:06:55 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/18 21:07:07 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/19 15:47:52 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+
 
 
 #endif

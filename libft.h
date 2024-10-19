@@ -6,14 +6,15 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/18 21:06:18 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/19 15:43:31 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H 
-# include<stdio.h>
-
+# include <stdio.h>
+# include <ctype.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -32,6 +33,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 
 #endif
