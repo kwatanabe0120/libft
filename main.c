@@ -1,4 +1,5 @@
-#include "libft_test.h"
+#include "libft.h"
+
 
 int	main ()
 {
@@ -73,6 +74,74 @@ int	main ()
     result_ft = ft_memchr(data, 'l', sizeof(data));
     printf("Real memchr result: %p\n", result_real);
     printf("FT memchr result: %p\n", result_ft);
+
+	 // strnstrテスト
+    printf("strnstr Test\n");
+
+    char haystack[] = "Hello, World!";
+    char needle1[] = "World";
+    char needle2[] = "Planet";
+
+
+    // Test Case 1: 完全一致
+    printf("Test Case 1: 'World' in 'Hello, World!'\n");
+    result_real = strnstr(haystack, needle1, 14);
+    result_ft = ft_strnstr(haystack, needle1, 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 2: 範囲内に部分文字列がない場合
+    printf("\nTest Case 2: 'Planet' in 'Hello, World!'\n");
+    result_real = strnstr(haystack, needle2, 14);
+    result_ft = ft_strnstr(haystack, needle2, 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 3: 検索範囲が足りない場合
+    printf("\nTest Case 3: 'World' in 'Hello, World!' (5文字まで)\n");
+    result_real = strnstr(haystack, needle1, 5);
+    result_ft = ft_strnstr(haystack, needle1, 5);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 4: 空文字列を探す場合
+    printf("\nTest Case 4: '' in 'Hello, World!'\n");
+    result_real = strnstr(haystack, "", 14);
+    result_ft = ft_strnstr(haystack, "", 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 5: 部分文字列が最初にある場合
+    printf("\nTest Case 5: 'World' in 'World! Hello, World!'\n");
+    char haystack3[] = "World! Hello, World!";
+    result_real = strnstr(haystack3, needle1, 14);
+    result_ft = ft_strnstr(haystack3, needle1, 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 6: needleがhaystackよりも長い場合
+    printf("\nTest Case 6: 'MuchLongerNeedle' in 'Short'\n");
+    char haystack4[] = "Short";
+    char needle3[] = "MuchLongerNeedle";
+    result_real = strnstr(haystack4, needle3, 14);
+    result_ft = ft_strnstr(haystack4, needle3, 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 7: ターゲットが空文字列の場合
+    printf("\nTest Case 7: 'World' in '' (空文字列)\n");
+    char haystack5[] = "";
+    result_real = strnstr(haystack5, needle1, 14);
+    result_ft = ft_strnstr(haystack5, needle1, 14);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
+
+    // Test Case 8: 検索領域が0の場合
+    printf("\nTest Case 8: 'World' in 'Hello, World!' (0文字)\n");
+    result_real = strnstr(haystack, needle1, 0);
+    result_ft = ft_strnstr(haystack, needle1, 0);
+    printf("Real strnstr result: %p\n", result_real);
+    printf("FT strnstr result:   %p\n", result_ft);
 
 
 	return 0;

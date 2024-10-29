@@ -6,7 +6,7 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/19 15:43:31 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:50:27 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 
 #endif
