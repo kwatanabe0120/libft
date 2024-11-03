@@ -6,7 +6,7 @@
 /*   By: kodwatan <kodwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:23:54 by kodwatan          #+#    #+#             */
-/*   Updated: 2024/10/29 17:50:27 by kodwatan         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:01:23 by kodwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
+# include <stdlib.h> 
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
